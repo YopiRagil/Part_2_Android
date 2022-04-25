@@ -1,5 +1,6 @@
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import React from 'react';
+import TopNavbar from '../Component/Navbar';
 import HomeScreen from '../Screen';
 // import {useSelector, useDispatch} from 'react-redux';
 
@@ -12,7 +13,14 @@ const MainOfNavigation = () => {
   return (
     <React.Fragment>
       <Stack.Navigator>
-        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen
+          options={{
+            title: 'Home',
+            header: props => <TopNavbar {...props} />,
+          }}
+          name="Home"
+          component={HomeScreen}
+        />
       </Stack.Navigator>
     </React.Fragment>
   );

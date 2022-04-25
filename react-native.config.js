@@ -1,11 +1,9 @@
-/* eslint-disable prettier/prettier */
-// const signalR = require('@microsoft/signalr');
-
 module.exports = {
-  project: {
-    ios: {},
-    android: {}, // grouped into "project"
+  dependencies: {
+    'react-native-vector-icons': {
+      platforms: {
+        ios: null,
+      },
+    },
   },
-  // signalR: require('@microsoft/signalr'),
-  // assets: ['./src/Assets/Fonts'],
 };

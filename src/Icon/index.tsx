@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React from 'react';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import Entypo from 'react-native-vector-icons/Entypo';
@@ -31,13 +32,13 @@ export interface IconType {
   type: ICONType;
   name: string;
   size?: number;
-  style?: TextStyle | any;
+  style?: TextStyle;
   color?: string;
 }
 
 export const Iconic = (props: IconType) => {
   const {type, name = 'user', color = 'gray', size = 24, style} = props;
-  let Element = FontAwesome;
+  let Element: any = FontAwesome;
 
   switch (type) {
     case 'ANT':
@@ -86,12 +87,7 @@ export const Iconic = (props: IconType) => {
       name={name}
       size={size}
       color={color}
-      style={[
-        // {
-        //     width: size_,
-        // },
-        style,
-      ]}
+      style={[{width: size}, style]}
     />
   );
 };
