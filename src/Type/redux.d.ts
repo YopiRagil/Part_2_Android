@@ -6,10 +6,10 @@ type TAction = {
 type DispatcType = (args: TAction | Function) => TAction;
 
 interface IState {
-  
+  main: IMain;
 }
 
 interface IMain {
-    isLoading: boolean
+  name: string;
+  picture: string;
 }
-

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React from 'react';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import Entypo from 'react-native-vector-icons/Entypo';
@@ -12,6 +13,7 @@ import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import Octicons from 'react-native-vector-icons/Octicons';
 import Zocial from 'react-native-vector-icons/Zocial';
 import {TextStyle} from 'react-native';
+import {theme} from '../Customs/Colos';
 
 export type ICONType =
   | 'ANT'
@@ -31,13 +33,19 @@ export interface IconType {
   type: ICONType;
   name: string;
   size?: number;
-  style?: TextStyle | any;
+  style?: TextStyle;
   color?: string;
 }
 
 export const Iconic = (props: IconType) => {
-  const {type, name = 'user', color = 'gray', size = 24, style} = props;
-  let Element = FontAwesome;
+  const {
+    type,
+    name = 'user',
+    color = theme.color.primary,
+    size = 24,
+    style,
+  } = props;
+  let Element: any = FontAwesome;
 
   switch (type) {
     case 'ANT':
@@ -86,12 +94,7 @@ export const Iconic = (props: IconType) => {
       name={name}
       size={size}
       color={color}
-      style={[
-        // {
-        //     width: size_,
-        // },
-        style,
-      ]}
+      style={[{width: size}, style]}
     />
   );
 };
