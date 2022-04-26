@@ -47,7 +47,6 @@ function ProfileScreen() {
     </View>
   );
 }
-// 'https://suitmedia.com/';
 
 export default ProfileScreen;
 
