@@ -13,6 +13,7 @@ import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import Octicons from 'react-native-vector-icons/Octicons';
 import Zocial from 'react-native-vector-icons/Zocial';
 import {TextStyle} from 'react-native';
+import {theme} from '../Customs/Colos';
 
 export type ICONType =
   | 'ANT'
@@ -37,7 +38,13 @@ export interface IconType {
 }
 
 export const Iconic = (props: IconType) => {
-  const {type, name = 'user', color = 'gray', size = 24, style} = props;
+  const {
+    type,
+    name = 'user',
+    color = theme.color.primary,
+    size = 24,
+    style,
+  } = props;
   let Element: any = FontAwesome;
 
   switch (type) {

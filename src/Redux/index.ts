@@ -1,10 +1,8 @@
-/* eslint-disable prettier/prettier */
 import {createStore, applyMiddleware, combineReducers} from 'redux';
 import thunk from 'redux-thunk';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {persistStore, persistReducer} from 'redux-persist';
 import MainReducer from './Reducer/Main.Reducer';
-
 
 const persistConfig = {
   key: 'root',
@@ -13,8 +11,7 @@ const persistConfig = {
 };
 
 const rootReducer = combineReducers({
-    main: persistReducer(persistConfig, MainReducer),
-  // main: MainReducer,
+  main: persistReducer(persistConfig, MainReducer),
 });
 
 const store = createStore(rootReducer, applyMiddleware(thunk));

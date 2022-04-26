@@ -1,10 +1,5 @@
-import { KEYS } from '../Key';
-
-
-
-export const mainFunction = () => {
-  const uri = KEYS.LOADING;
+export const setName: any = (data: any) => {
   return async (dispatch: DispatcType) => {
-        
+    dispatch({payload: data, type: 'SET_NAME'});
   };
 };

@@ -1,15 +1,19 @@
-import { KEYS } from "../Key";
-
 const initialState: IMain = {
-  isLoading:false
+  name: '',
+  picture: '',
 };
 
-const MainReducer:any = (state: IMain = initialState, action: TAction): IMain => {
-  switch (action.type) {
-    case KEYS.LOADING:
+const MainReducer: any = (
+  state: IMain = initialState,
+  action: TAction,
+): IMain => {
+  const {payload, type} = action;
+  switch (type) {
+    case 'SET_NAME':
       return {
         ...state,
-        isLoading: true
+        name: payload.name,
+        picture: payload.picture,
       };
 
     default:

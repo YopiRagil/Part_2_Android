@@ -1,13 +1,8 @@
-/* eslint-disable react-native/no-inline-styles */
 import React from 'react';
-import {Text, View} from 'react-native';
+import {WebView} from 'react-native-webview';
 
 function WebViewScreen() {
-  return (
-    <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-      <Text>WebView Screens</Text>
-    </View>
-  );
+  return <WebView source={{uri: 'https://suitmedia.com/'}} />;
 }
 
 export default WebViewScreen;
