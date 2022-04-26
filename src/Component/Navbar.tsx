@@ -10,7 +10,6 @@ const TopNavbar = (_props: any) => {
   const {route, options} = _props;
   const {navigate, goBack} = useNavigation<any>();
   const styles = styleTheme();
-  console.log(route);
   return (
     <SafeAreaView>
       <View style={styles.container}>
