@@ -64,29 +64,6 @@ function UserScreen() {
 
 export default UserScreen;
 
-const styleTheme = () => {
-  return StyleSheet.create({
-    container: {flex: 1, backgroundColor: 'white'},
-    flatList: {padding: 20},
-    footer: {height: 50},
-    card: {
-      width: '100%',
-      borderBottomWidth: 0.5,
-      paddingVertical: 15,
-      borderColor: 'silver',
-      flexDirection: 'row',
-      alignItems: 'center',
-    },
-    nameText: {
-      fontFamily: theme.font.PoppinsM,
-      fontSize: 16,
-      color: theme.color.text,
-    },
-    mailText: {fontFamily: theme.font.PoppinsM, fontSize: 12},
-    content: {width: theme.width - 95, marginLeft: 10},
-  });
-};
-
 const Item = ({email, name, profile}: any) => {
   const styles = styleTheme();
   const {navigate} = useNavigation<any>();
@@ -109,4 +86,27 @@ const Item = ({email, name, profile}: any) => {
       </View>
     </TouchableOpacity>
   );
+};
+
+const styleTheme = () => {
+  return StyleSheet.create({
+    container: {flex: 1, backgroundColor: 'white'},
+    flatList: {padding: 20},
+    footer: {height: 50},
+    card: {
+      width: '100%',
+      borderBottomWidth: 0.5,
+      paddingVertical: 15,
+      borderColor: 'silver',
+      flexDirection: 'row',
+      alignItems: 'center',
+    },
+    nameText: {
+      fontFamily: theme.font.PoppinsM,
+      fontSize: 16,
+      color: theme.color.text,
+    },
+    mailText: {fontFamily: theme.font.PoppinsM, fontSize: 12},
+    content: {width: theme.width - 95, marginLeft: 10},
+  });
 };
